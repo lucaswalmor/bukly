@@ -17,7 +17,7 @@ Este projeto é uma aplicação de gerenciamento de hotéis e quartos, desenvolv
 - [Testes](#testes)
   - [Executando os Testes](#executando-os-testes)
   - [Testes Implementados](#testes-implementados)
-- [Bônus e Implementações Adicionais](##bônus-e-implementações-adicionais)
+- [Bônus e Implementações Adicionais](#bônus-e-implementações-adicionais)
 - [Contato](#contato)
 
 ## Requisitos do Projeto
@@ -127,7 +127,7 @@ Antes de rodar o projeto, tenha os seguintes pré-requisitos instalados:
 
 Testes unitários foram implementados para garantir a robustez das operações de CRUD das entidades Hotel e Room.
 
-## Bonus e Implementações Adicionais:
+# Bonus e Implementações Adicionais:
 
 - **Seeders e Factories:** Utilizados para popular as tabelas com dados iniciais de Hotéis e Quartos.
 
