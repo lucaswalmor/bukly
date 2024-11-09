@@ -127,7 +127,7 @@ Antes de rodar o projeto, tenha os seguintes pré-requisitos instalados:
 
 Testes unitários foram implementados para garantir a robustez das operações de CRUD das entidades Hotel e Room.
 
-# Bonus e Implementações Adicionais:
+# Bônus e Implementações Adicionais:
 
 - **Seeders e Factories:** Utilizados para popular as tabelas com dados iniciais de Hotéis e Quartos.
 
