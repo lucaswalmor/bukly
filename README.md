@@ -17,8 +17,7 @@ Este projeto é uma aplicação de gerenciamento de hotéis e quartos, desenvolv
 - [Testes](#testes)
   - [Executando os Testes](#executando-os-testes)
   - [Testes Implementados](#testes-implementados)
-- [Bônus e Implementações Adicionais](#bônus-e-implementações-adicionais)
-- [To-Do e Melhorias Futuras](#to-do-e-melhorias-futuras)
+- [Bônus e Implementações Adicionais](##bônus-e-implementações-adicionais)
 - [Contato](#contato)
 
 ## Requisitos do Projeto
@@ -37,8 +36,8 @@ Este projeto é uma aplicação de gerenciamento de hotéis e quartos, desenvolv
 - **Documentação clara do código
 
 ## Tecnologias Utilizadas
-- **Backend**: Laravel 10.x
-- **Frontend**: Inertia.js e Vue.js
+- **Backend**: Laravel 11.x
+- **Frontend**: Inertia.js e Vue.js 3
 - **Estilização**: Tailwind CSS
 - **Testes**: PHPUnit
 - **Banco de Dados**: MySQL
@@ -136,5 +135,5 @@ Testes unitários foram implementados para garantir a robustez das operações d
    php artisan make:seeder HotelSeeder
    php artisan make:seeder RoomSeeder
    ```
-   
+
 - **Tailwind CSS:** Utilizado para estilização, proporcionando uma interface mais agradável e responsiva.
