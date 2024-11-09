@@ -1,69 +1,63 @@
 # Hotel Management System
+
 Este projeto é uma aplicação de gerenciamento de hotéis e quartos, desenvolvida com Laravel 10.x, Inertia.js e Vue.js. A aplicação permite criar, visualizar, atualizar e excluir (CRUD) entidades de Hotéis e Quartos e realiza operações de preenchimento automático de endereços através da API do ViaCEP.
 
-Requisitos do Projeto
-Laravel 10.x ou 11.x
-Sistema de autenticação simples
-Funcionalidade CRUD para as entidades:
-Hotéis
-Campos: name (obrigatório, único), address (obrigatório), city (obrigatório), state (obrigatório), zip_code (obrigatório), website (opcional)
-Quartos
-Campos: name (obrigatório), description (obrigatório), hotel_id (chave estrangeira)
+## Sumário
+- [Requisitos do Projeto](#requisitos-do-projeto)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Configuração do Projeto](#configuração-do-projeto)
+  - [Pré-requisitos](#pré-requisitos)
+  - [Instalação](#instalação)
+- [Uso](#uso)
+  - [Autenticação](#autenticação)
+  - [CRUD de Hotéis e Quartos](#crud-de-hotéis-e-quartos)
+  - [Preenchimento Automático de Endereço](#preenchimento-automático-de-endereço)
+- [Estrutura do Banco de Dados](#estrutura-do-banco-de-dados)
+  - [Tabelas](#tabelas)
+- [Testes](#testes)
+  - [Executando os Testes](#executando-os-testes)
+  - [Testes Implementados](#testes-implementados)
+- [Bônus e Implementações Adicionais](#bônus-e-implementações-adicionais)
+- [To-Do e Melhorias Futuras](#to-do-e-melhorias-futuras)
+- [Contato](#contato)
 
-Tecnologias Utilizadas
-Backend: Laravel 10.x
-Frontend: Inertia.js e Vue.js
-Estilização: Tailwind CSS
-Testes: PHPUnit
-Banco de Dados: MySQL
-API de Endereços: ViaCEP
-Configuração do Projeto
-Pré-requisitos
-PHP >= 8.1
-Composer >= 2.x
-MySQL >= 5.7
-Node.js >= 14
-NPM/Yarn
+## Requisitos do Projeto
+- **Laravel 10.x ou 11.x**
+- **Sistema de autenticação simples**
+- **Funcionalidade CRUD para as entidades**:
+  - **Hotéis**
+    - Campos: `name` (obrigatório, único), `address` (obrigatório), `city` (obrigatório), `state` (obrigatório), `zip_code` (obrigatório), `website` (opcional)
+  - **Quartos**
+    - Campos: `name` (obrigatório), `description` (obrigatório), `hotel_id` (chave estrangeira)
+- Uso de **Migrations** para a criação das tabelas
+- **Preenchimento automático de endereço** via API do ViaCEP
+- Frontend com **Inertia.js** e **Vue.js**
+- **Validações de formulário** com Laravel
+- **Testes unitários**
+- **Documentação clara do código
 
-Instalação
-Clone o repositório: git clone https://github.com/seu-usuario/nome-do-repositorio.git
-Crie um novo diretório: cd nome-do-repositorio
-Instale as dependências do backend: composer install
-Instale as dependências do frontend: npm install
-Configure o arquivo .env com as informações de banco de dados
-Execute as migrações: php artisan migrate --seed
-Compile os arquivos do frontend: npm run dev
-Inicie o servidor local: php artisan serve
-Uso
-A aplicação possui um sistema de autenticação simples para acesso às funcionalidades de criação, edição e exclusão de Hotéis e Quartos.
+## Tecnologias Utilizadas
+- **Backend**: Laravel 10.x
+- **Frontend**: Inertia.js e Vue.js
+- **Estilização**: Tailwind CSS
+- **Testes**: PHPUnit
+- **Banco de Dados**: MySQL
+- **API de Endereços**: ViaCEP
 
-CRUD de Hotéis e Quartos
-O sistema permite gerenciar:
+## Configuração do Projeto
 
-Hotéis: Cadastrar, visualizar, atualizar e excluir.
-Quartos: Associar quartos a um hotel específico e gerenciar os quartos com as operações CRUD.
-Estrutura do Banco de Dados
-Tabelas:
+### Pré-requisitos
+Antes de rodar o projeto, tenha os seguintes pré-requisitos instalados:
 
-Hotels
-id (Identificador único do hotel)
-name (Nome do hotel)
-address, city, state, zip_code (Informações de endereço)
-website (Website do hotel)
-Rooms
-id (Identificador único do quarto)
-name (Nome do quarto)
-description (Descrição do quarto)
-hotel_id (Chave estrangeira para o hotel associado)
-Testes
-Testes unitários foram implementados para garantir a robustez das operações de CRUD das entidades Hotel e Room.
+- **PHP** >= 8.1
+- **Composer** >= 2.x
+- **MySQL** >= 5.7
+- **Node.js** >= 14
+- **NPM/Yarn**
 
-Bonus e Implementações Adicionais
-Seeders e Factories: Utilizados para popular as tabelas com dados iniciais de Hotéis e Quartos.
-Tailwind CSS: Utilizado para estilização, proporcionando uma interface mais agradável e responsiva.
-To-Do e Melhorias Futuras
-Implementar Vuetify: Estilização adicional com Vuetify pode ser considerada para componentes de UI mais avançados.
-Implementar Laravel Sail: Para facilitar o ambiente de desenvolvimento com Docker.
-Melhorias na Interface de Usuário: Componentes de UI mais sofisticados e interativos.
-Testes de Integração: Expandir a cobertura dos testes para incluir testes de integração.
-Espero que isso ajude! Lembre-se de que é importante configurar o arquivo .gitignore para excluir os arquivos que não devem ser incluídos no repositório.
+### Instalação
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   cd nome-do-repositorio
+   ```
