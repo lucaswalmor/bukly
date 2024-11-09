@@ -1,13 +1,20 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HotelController;
 use App\Http\Controllers\RoomController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 Route::get('/', function() {
-    return Inertia::render('Home');
+    return Inertia::render('auth/Login');
 });
+
+Route::post('/login', [AuthController::class, 'login']);
+
+Route::get('/home', function() {
+    return Inertia::render('Home');
+})->name('home');
 
 Route::controller(HotelController::class)->group(function() {
     Route::get('/hotel', 'index')->name('hotel.index');
@@ -28,5 +35,3 @@ Route::controller(RoomController::class)->group(function() {
     Route::put('/room/editar/{roomId}', 'update')->name('room.update');
     Route::delete('/room/deletar/{roomId}', 'destroy')->name('room.destroy');
 });
-
-require __DIR__.'/auth.php';

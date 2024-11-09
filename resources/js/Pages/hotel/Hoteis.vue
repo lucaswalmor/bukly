@@ -26,7 +26,7 @@
 
         <div class="flex mt-5">
             <Link
-                href="/"
+                href="/home"
                 class="text-center py-2 px-4 bg-gray-600 text-white font-bold rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50"
             >
                 Voltar
