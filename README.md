@@ -8,6 +8,7 @@ Este projeto é uma aplicação de gerenciamento de hotéis e quartos, desenvolv
 - [Configuração do Projeto](#configuração-do-projeto)
   - [Pré-requisitos](#pré-requisitos)
   - [Instalação](#instalação)
+  - [Usando o Laravel Sail](#usando-o-laravel-sail)
 - [CRUD de Hotéis e Quartos](#crud-de-hotéis-e-quartos)
   - [O sistema permite gerenciar](#o-sistema-permite-gerenciar)
 - [Estrutura do Banco de Dados](#estrutura-do-banco-de-dados)
@@ -94,6 +95,15 @@ Antes de rodar o projeto, tenha os seguintes pré-requisitos instalados:
 7. Inicie o servidor local:
    ```bash
    php artisan serve
+   ```
+
+## Usando o Laravel Sail
+
+Este projeto também utiliza o Laravel Sail para facilitar o desenvolvimento em um ambiente Docker. Com o Sail, é possível inicializar o ambiente rapidamente, sem configurar diretamente o banco de dados ou serviços externos.
+
+### Iniciando o Laravel Sail em segundo plano
+   ```bash
+   ./vendor/bin/sail up -d
    ```
 
 ## CRUD de Hotéis e Quartos
