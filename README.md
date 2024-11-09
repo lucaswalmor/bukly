@@ -123,3 +123,17 @@ Antes de rodar o projeto, tenha os seguintes pré-requisitos instalados:
 - name (Nome do quarto)
 - description (Descrição do quarto)
 - hotel_id (Chave estrangeira para o hotel associado)
+
+## Testes
+
+Testes unitários foram implementados para garantir a robustez das operações de CRUD das entidades Hotel e Room.
+
+## Bonus e Implementações Adicionais:
+
+- **Seeders e Factories:** Utilizados para popular as tabelas com dados iniciais de Hotéis e Quartos.
+- **Tailwind CSS:** Utilizado para estilização, proporcionando uma interface mais agradável e responsiva.
+
+   ```bash
+   php artisan make:seeder HotelSeeder
+   php artisan make:seeder RoomSeeder
+   ```
