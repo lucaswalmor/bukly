@@ -62,4 +62,64 @@ Antes de rodar o projeto, tenha os seguintes pré-requisitos instalados:
    cd nome-do-repositorio
    ```
 
-   teste
+2. Instale as dependências do backend:
+   ```bash
+   composer install
+   ```
+
+3. Instale as dependências do frontend:
+   ```bash
+   npm install
+   ```
+
+4. Configure o arquivo .env com as informações de banco de dados:
+   ```bash
+        CREATE DATABASE hotel_test;
+
+        DB_CONNECTION=mysql
+        DB_HOST=localhost
+        DB_PORT=3306
+        DB_DATABASE=hotel_test
+        DB_USERNAME=root
+        DB_PASSWORD=
+   ```
+
+5. Execute as migrations e seeders para popular o banco de dados:
+   ```bash
+   php artisan migrate --seed
+   ```
+
+6. Compile os arquivos do frontend:
+   ```bash
+   npm run dev
+   ```
+
+7. Inicie o servidor local:
+   ```bash
+   php artisan serve
+   ```
+
+## CRUD de Hotéis e Quartos
+
+### O sistema permite gerenciar:
+
+- **Hotéis:** Cadastrar, visualizar, atualizar e excluir.
+- **Quartos:** Associar quartos a um hotel específico e gerenciar os quartos com as operações CRUD.
+
+## Estrutura do Banco de Dados
+
+### Tabelas:
+
+#### Hotéis
+
+- id (Identificador único do hotel)
+- name (Nome do hotel)
+- address, city, state, zip_code (Informações de endereço)
+- website (Website do hotel)
+
+#### Rooms
+
+- id (Identificador único do quarto)
+- name (Nome do quarto)
+- description (Descrição do quarto)
+- hotel_id (Chave estrangeira para o hotel associado)
