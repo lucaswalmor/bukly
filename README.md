@@ -125,6 +125,18 @@ Antes de rodar o projeto, tenha os seguintes pré-requisitos instalados:
 
 Testes unitários foram implementados para garantir a robustez das operações de CRUD das entidades Hotel e Room.
 
+### Executando os Testes
+
+   ```bash
+   php artisan make:test HotelTest --unit  
+   php artisan make:test RoomTest --unit  
+   ```
+
+### Testes Implementados
+
+- **HotelTest:** Testa a criação, atualização, exclusão de hotéis e validações de campo obrigatórios.
+- **RoomTest:** Testa a criação de quartos e associações com hotéis.
+
 # Bônus e Implementações Adicionais:
 
 - **Seeders e Factories:** Utilizados para popular as tabelas com dados iniciais de Hotéis e Quartos.
