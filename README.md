@@ -149,3 +149,4 @@ Testes unitários foram implementados para garantir a robustez das operações d
    ```
 
 - **Tailwind CSS:** Utilizado para estilização, proporcionando uma interface mais agradável e responsiva.
+- **Vuetify:** Utilizado para melhorar a experiência de usuário e estilização do frontend.
