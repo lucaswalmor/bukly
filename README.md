@@ -149,3 +149,12 @@ Testes unitários foram implementados para garantir a robustez das operações d
 
 - **Tailwind CSS:** Utilizado para estilização, proporcionando uma interface mais agradável e responsiva.
 - **Vuetify:** Utilizado para melhorar a experiência de usuário e estilização do frontend.
+
+## Autenticação de Login com Laravel Sanctum e Inertia.js
+
+Este projeto utiliza Laravel Sanctum para autenticação de usuários e Inertia.js para gerenciar a comunicação entre o backend e o frontend.
+
+   ```bash
+   composer require laravel/sanctum
+   php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"
+   ```
