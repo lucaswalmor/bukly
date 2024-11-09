@@ -74,7 +74,16 @@
                     type="submit"
                     class="w-full py-2 px-4 bg-blue-600 text-white font-bold rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
                 >
-                    Cadastrar Quarto
+                    <span v-if="isLoading">
+                        <v-progress-circular
+                            color="blue"
+                            indeterminate
+                        ></v-progress-circular>
+                        Aguarde...
+                    </span>
+                    <span v-else>
+                        Cadastrar Quarto
+                    </span>
                 </button>
             </div>
         </form>
@@ -97,16 +106,19 @@ export default {
                 description: "asdasdasd",
                 errors: {},
             },
+            isLoading: false,
         };
     },
     methods: {
         async submit() {
+            this.isLoading = true;
             this.$inertia.post("/room/cadastro", this.form, {
                 onSuccess: (page) => {
-                    console.log("Cadastro realizado com sucesso");
+                    this.isLoading = false;
                 },
                 onError: (errors) => {
                     this.form.errors = errors;
+                    this.isLoading = false;
                 },
             });
         },

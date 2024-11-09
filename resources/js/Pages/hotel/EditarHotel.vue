@@ -109,7 +109,16 @@
                     type="submit"
                     class="w-full py-2 px-4 bg-blue-600 text-white font-bold rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
                 >
-                    Editar Hotel
+                    <span v-if="isLoading">
+                        <v-progress-circular
+                            color="blue"
+                            indeterminate
+                        ></v-progress-circular>
+                        Aguarde...
+                    </span>
+                    <span v-else>
+                        Editar Hotel
+                    </span>
                 </button>
             </div>
         </form>
@@ -126,18 +135,19 @@ export default {
     },
     data() {
         return {
-
+            isLoading: false,
         };
     },
     methods: {
         async submit() {
+            this.isLoading = true;
             this.$inertia.put(`/hotel/editar/${this.$props.hotel.id}`, this.$props.hotel, {
                 onSuccess: (page) => {
-                    console.log(page)
-                    // this.$inertia.visit('/');
+                    this.isLoading = false;
                 },
                 onError: (errors) => {
                     console.log(errors)
+                    this.isLoading = false;
                 },
             });
         },

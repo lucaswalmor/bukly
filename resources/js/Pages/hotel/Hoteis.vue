@@ -6,12 +6,19 @@
             </Link>
         </div>
 
-        <div v-if="showAlert" class="flex w-full alert alert-success mt-4 p-4 text-green-700 bg-green-100 rounded relative">
-            <span>{{ $page.props.flash.success }}</span>
-            <button @click="showAlert = false" class="absolute top-1 right-1 text-gray-600 hover:text-gray-900 font-bold">
-                &times;
-            </button>
-        </div>
+        <v-alert
+            v-if="showAlert" 
+            class="mt-3"
+            :text="$page.props.flash.success"
+            title="Sucesso"
+            type="success"
+            color="success"
+            variant="tonal"
+            border="start"
+            border-color="deep-green accent-4"
+            elevation="2"
+            closable
+        ></v-alert>
 
         <div class="flex mt-5">
             <TableHotels :hoteis="hoteis" />

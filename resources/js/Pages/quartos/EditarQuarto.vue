@@ -65,7 +65,16 @@
                     type="submit"
                     class="w-full py-2 px-4 bg-blue-600 text-white font-bold rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
                 >
-                    Editar Quarto
+                    <span v-if="isLoading">
+                        <v-progress-circular
+                            color="blue"
+                            indeterminate
+                        ></v-progress-circular>
+                        Aguarde...
+                    </span>
+                    <span v-else>
+                        Editar Quarto
+                    </span>
                 </button>
             </div>
         </form>
@@ -82,16 +91,19 @@ export default {
     },
     data() {
         return {
+            isLoading: false,
         };
     },
     methods: {
         async submit() {
+            this.isLoading = true;
             this.$inertia.put(`/room/editar/${this.$props.quarto.id}`, this.$props.quarto, {
                 onSuccess: (page) => {
-                    console.log("Cadastro realizado com sucesso");
+                    this.isLoading = false;
                 },
                 onError: (errors) => {
                     this.quarto.errors = errors;
+                    this.isLoading = false;
                 },
             });
         },
